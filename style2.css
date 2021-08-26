@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+    background-color: yellow;
+}
+/* Index */
+h1 {
+    text-align: center;
+}
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.indexPage,
+.pageOne {
+    margin: 30px auto;
+    width: max-content;
+}
+.indexPage .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 50px 30px 0;
+    background-color: rgb(106, 197, 233);
+}
+
+.indexPage .box1 {
+    animation: box1 3000ms infinite alternate running;
+    transform: skew(-20deg);
+}
+@keyframes box1 {
+    100% {
+        transform: skew(20deg);
+    }
+}
+.indexPage .box2 {
+    background-color: lightgray;
+    animation: box2 3000ms infinite alternate running;
+    transform: skew(10deg, -20deg);
+}
+@keyframes box2 {
+    100% {
+        transform: skew(10deg, 20deg);
+    }
+}
+.indexPage .box3 {
+    animation: box3 3000ms infinite running;
+}
+@keyframes box3 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.indexPage .box3 {
+    animation: box3 3000ms infinite running;
+}
+@keyframes box3 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.indexPage .box4 {
+    animation: box4 3000ms infinite alternate running;
+}
+@keyframes box4 {
+    100% {
+        height: 50px;
+    }
+}
+.indexPage .box5 {
+    background-color: firebrick;
+    animation: box5 3000ms infinite alternate running;
+}
+@keyframes box5 {
+    100% {
+        width: 50px;
+    }
+}
+.indexPage .box6 {
+    background-color: forestgreen;
+    animation: box6 1500ms infinite alternate running;
+}
+@keyframes box6 {
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+/* Page 1 */
+.pageOne .box {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    margin: 20px 20px 0;
+}
+.pageOne .box1 {
+    transition: width 2000ms;
+}
+.pageOne .box1:hover {
+    width: 300px;
+}
+.pageOne .box2 {
+    transition: width 2000ms 1000ms, height 3000ms 1000ms;
+}
+.pageOne .box2:hover {
+    width: 300px;
+    height: 300px;
+}
+.pageOne .box3 {
+    transition: width 2000ms linear;
+}
+.pageOne .box3:hover {
+    width: 300px;
+}
+.pageOne .box4 {
+    transition: width 2000ms ease;
+}
+.pageOne .box4:hover {
+    width: 300px;
+}
+.pageOne .box5 {
+    transition: width 2000ms ease-in;
+}
+.pageOne .box5:hover {
+    width: 300px;
+}
+.pageOne .box6 {
+    transition: width 2000ms ease-out;
+}
+.pageOne .box6:hover {
+    width: 300px;
+}
+.pageOne .box7 {
+    transition: width 2000ms ease-in-out;
+}
+.pageOne .box7:hover {
+    width: 300px;
+}
+.heading {
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.head1 {
+    background-color: orange;
+}
+.head2 {
+    background-color: white;
+}
+.head3{
+    background-color: green;
+}
+/* Page 2 */
+.heading {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    background-image: url("sky.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: 10px outset white;
+    border-right-color: green;
+    border-left-color: orange;
+
+    overflow: hidden;
+}
+.sun {
+    position: absolute;
+    top: 150px;
+    right: 0;
+
+    animation: sun 5000ms linear forwards;
+}
+@keyframes sun {
+    to {
+        transform: translateX(-300px);
+    }
+}
+.road {
+    height: 250px;
+    width: 500%;
+    background-image: url("road.jpg");
+    background-repeat: repeat-x;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    animation: road 3500ms linear infinite;
+}
+@keyframes road {
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+.city {
+    height: 350px;
+    width: 500%;
+    background-image: url("city.png");
+    background-repeat: repeat-x;
+
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+
+    animation: city 3500ms linear infinite;
+}
+@keyframes city {
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+.car {
+    width: 500px;
+
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.car img {
+    width: 100%;
+}
+.car img:nth-child(1) {
+    position: absolute;
+    left: 70px;
+    top: -70px;
+    z-index: -1;
+    width: 100px;
+}
+.wheel {
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    z-index: 1;
+
+    transform: translateX(-50%);
+}
+.wheel img {
+    animation: wheel 900ms linear infinite;
+    width: 80px;
+    height: 80px;
+}
+.frontwheel {
+    position: absolute;
+    left: 105px;
+}
+.backwheel {
+    position: absolute;
+    right: 120px;
+}
+@keyframes wheel {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
