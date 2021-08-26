@@ -235,7 +235,7 @@ a {
 }
 .car img:nth-child(1) {
     position: absolute;
-    left: 70px;
+    left: 180px;
     top: -70px;
     z-index: -1;
     width: 100px;
